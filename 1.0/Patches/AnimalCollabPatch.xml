@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+  <!-- Bo's Milkable Animals - animal collab project -->
+ 
+<Patch>
+  <!-- Bison -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "ACPBison"]/comps</xpath>
+            </li>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "ACPBison"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ACPBison"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>12</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+   
+	  <!-- Llama -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "ACPLlama"]/comps</xpath>
+            </li>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "ACPLlama"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ACPLlama"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>5</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+   
+	
+   
+</Patch>

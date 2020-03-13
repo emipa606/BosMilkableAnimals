@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+ 
+  <!-- Bo's Milkable Animals - Now with PatchOperations! -->
+ 
+<Patch>
+  <!-- Races_Animal_Arid - Gazelle -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Gazelle"]/comps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Gazelle"]</xpath>
+                <value>
+                    <comps/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Gazelle"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Gazelle"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>4</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+   
+  <!-- Races_Animal_Farm - Alpaca -->
+  <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Alpaca"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Alpaca"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>5</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+ 
+  <!-- Races_Animal_Temperate - Deer - Ibex -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Deer"]/comps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Deer"]</xpath>
+                <value>
+                    <comps/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Deer"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Deer"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>5</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+   
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Ibex"]/comps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Ibex"]</xpath>
+                <value>
+                    <comps/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Ibex"]/comps/li[@Class="CompProperties_Milkable"]</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Ibex"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Milkable">
+                        <milkDef>Milk</milkDef>
+                        <milkIntervalDays>2</milkIntervalDays>
+                        <milkAmount>6</milkAmount>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+   
+</Patch>
